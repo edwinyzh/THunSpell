@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.0">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>THunSpell: HunSpellDialog: Class THunSpellDialog</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="THunSpellDialog"></a><h1 class="cio">Class THunSpellDialog</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="HunSpellDialog.html">HunSpellDialog</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type THunSpellDialog = class(TComponent)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Component for check spelling a TMemo with a dialog.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TComponent</li>
+<li class="thisitem">THunSpellDialog</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HunSpellDialog.THunSpellDialog.html#DoOnCorrect">DoOnCorrect</a></b>(AWord: string; var ASkip: boolean); dynamic;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="HunSpellDialog.THunSpellDialog.html#Execute">Execute</a></b>: boolean;</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpellDialog.THunSpellDialog.html#HunSpell">HunSpell</a></b>: <a   href="HunSpell.THunSpell.html">THunSpell</a> read fHunSpell write fHunSpell;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpellDialog.THunSpellDialog.html#Memo">Memo</a></b>: TCustomMemo read fMemo write fMemo;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpellDialog.THunSpellDialog.html#OnCheckFinished">OnCheckFinished</a></b>: <a   href="HunSpellDialog.html#TFinishedEvent">TFinishedEvent</a> read fOnCheckFinished write fOnCheckFinished;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpellDialog.THunSpellDialog.html#OnCheckStart">OnCheckStart</a></b>: TNotifyEvent read fOnCheckStart write fOnCheckStart;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpellDialog.THunSpellDialog.html#OnCorrect">OnCorrect</a></b>: <a   href="HunSpellDialog.html#TCorrectEvent">TCorrectEvent</a> read fOnCorrect write fOnCorrect;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="DoOnCorrect"></a><code>procedure <b>DoOnCorrect</b>(AWord: string; var ASkip: boolean); dynamic;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Protected declarations</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Execute"></a><code>function <b>Execute</b>: boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Check spelling. </p>
+<h6 class="description_section">Returns</h6>
+<p class="return"><code>True</code> when spell checking was not canceled.</p></td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="HunSpell"></a><code>property <b>HunSpell</b>: <a   href="HunSpell.THunSpell.html">THunSpell</a> read fHunSpell write fHunSpell;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<a class="normal"  href="HunSpell.THunSpell.html">THunSpell</a> object to use for spell checking.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="Memo"></a><code>property <b>Memo</b>: TCustomMemo read fMemo write fMemo;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Memo to check for spelling errors.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="OnCheckFinished"></a><code>property <b>OnCheckFinished</b>: <a   href="HunSpellDialog.html#TFinishedEvent">TFinishedEvent</a> read fOnCheckFinished write fOnCheckFinished;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Finished with checking</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="OnCheckStart"></a><code>property <b>OnCheckStart</b>: TNotifyEvent read fOnCheckStart write fOnCheckStart;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Start checking</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="OnCorrect"></a><code>property <b>OnCorrect</b>: <a   href="HunSpellDialog.html#TCorrectEvent">TCorrectEvent</a> read fOnCorrect write fOnCorrect;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Correct a word.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.0</a> on 2011-01-24 07:59:29</em>
+</span>
+</body></html>

@@ -1,0 +1,5 @@
+libhunspell.dll was compiled from the original source from 
+http://sourceforge.net/projects/hunspell/files/Hunspell/1.3.2/hunspell-1.3.2.tar.gz/download
+with Microsoft Visual C++ 2010.
+
+You must distribute this file with your program.

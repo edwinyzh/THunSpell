@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.0">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>THunSpell: HunSpellApi</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit HunSpellApi</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td>Classes, Interfaces, Objects and Records</td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td><a class="section"  href="#%40Types">Types</a></td><td>Constants</td><td><a class="section"  href="#%40Variables">Variables</a></td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Interface to the libhunspell.dll</p>
+<p>
+THunSpell Copyright (C) 2010, Stefan Ascher
+
+<p>
+
+<p>  
+
+<p>$Id: HunSpellApi.pas,v 1.1 2010/11/30 06:55:58 Stefan Ascher Exp $</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="HunSpellApi.html#LoadLib">LoadLib</a></b>: boolean;</code></td>
+</tr>
+</table>
+<a name="%40Types"></a><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#PPChar">PPChar</a></b> = &circ;PChar;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#Thunspell_initialize">Thunspell_initialize</a></b> = function(aff_file: PChar; dict_file: PChar): Pointer; cdecl;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#Thunspell_uninitialize">Thunspell_uninitialize</a></b> = procedure(spell: Pointer); cdecl;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#Thunspell_spell">Thunspell_spell</a></b> = function(spell: Pointer; word: PChar): BOOL; cdecl;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#Thunspell_suggest">Thunspell_suggest</a></b> = function(spell: Pointer; word: PChar; var suggestions: <a   href="HunSpellApi.html#PPChar">PPChar</a>): Integer; cdecl;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#Thunspell_suggest_auto">Thunspell_suggest_auto</a></b> = function(spell: Pointer; word: PChar; var sugg: <a   href="HunSpellApi.html#PPChar">PPChar</a>): Integer; cdecl;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#Thunspell_suggest_free">Thunspell_suggest_free</a></b> = procedure(spell: Pointer; sugg: <a   href="HunSpellApi.html#PPChar">PPChar</a>; len: Integer); cdecl;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#Thunspell_get_dic_encoding">Thunspell_get_dic_encoding</a></b> = function(spell: Pointer): PChar; cdecl;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#Thunspell_add">Thunspell_add</a></b> = function(spell: Pointer; word: PChar): Integer; cdecl;</code></td>
+</tr>
+</table>
+<a name="%40Variables"></a><h3 class="summary">Variables</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#hunspell_initialize">hunspell_initialize</a></b>: <a   href="HunSpellApi.html#Thunspell_initialize">Thunspell_initialize</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#hunspell_uninitialize">hunspell_uninitialize</a></b>: <a   href="HunSpellApi.html#Thunspell_uninitialize">Thunspell_uninitialize</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#hunspell_spell">hunspell_spell</a></b>: <a   href="HunSpellApi.html#Thunspell_spell">Thunspell_spell</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#hunspell_suggest">hunspell_suggest</a></b>: <a   href="HunSpellApi.html#Thunspell_suggest">Thunspell_suggest</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#hunspell_suggest_auto">hunspell_suggest_auto</a></b>: <a   href="HunSpellApi.html#Thunspell_suggest_auto">Thunspell_suggest_auto</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#hunspell_suggest_free">hunspell_suggest_free</a></b>: <a   href="HunSpellApi.html#Thunspell_suggest_free">Thunspell_suggest_free</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#hunspell_get_dic_encoding">hunspell_get_dic_encoding</a></b>: <a   href="HunSpellApi.html#Thunspell_get_dic_encoding">Thunspell_get_dic_encoding</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="HunSpellApi.html#hunspell_add">hunspell_add</a></b>: <a   href="HunSpellApi.html#Thunspell_add">Thunspell_add</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="LoadLib"></a><code>function <b>LoadLib</b>: boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PPChar"></a><code><b>PPChar</b> = &circ;PChar;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Thunspell_initialize"></a><code><b>Thunspell_initialize</b> = function(aff_file: PChar; dict_file: PChar): Pointer; cdecl;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Thunspell_uninitialize"></a><code><b>Thunspell_uninitialize</b> = procedure(spell: Pointer); cdecl;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Thunspell_spell"></a><code><b>Thunspell_spell</b> = function(spell: Pointer; word: PChar): BOOL; cdecl;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Thunspell_suggest"></a><code><b>Thunspell_suggest</b> = function(spell: Pointer; word: PChar; var suggestions: <a   href="HunSpellApi.html#PPChar">PPChar</a>): Integer; cdecl;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Thunspell_suggest_auto"></a><code><b>Thunspell_suggest_auto</b> = function(spell: Pointer; word: PChar; var sugg: <a   href="HunSpellApi.html#PPChar">PPChar</a>): Integer; cdecl;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Thunspell_suggest_free"></a><code><b>Thunspell_suggest_free</b> = procedure(spell: Pointer; sugg: <a   href="HunSpellApi.html#PPChar">PPChar</a>; len: Integer); cdecl;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Thunspell_get_dic_encoding"></a><code><b>Thunspell_get_dic_encoding</b> = function(spell: Pointer): PChar; cdecl;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Thunspell_add"></a><code><b>Thunspell_add</b> = function(spell: Pointer; word: PChar): Integer; cdecl;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Variables</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="hunspell_initialize"></a><code><b>hunspell_initialize</b>: <a   href="HunSpellApi.html#Thunspell_initialize">Thunspell_initialize</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="hunspell_uninitialize"></a><code><b>hunspell_uninitialize</b>: <a   href="HunSpellApi.html#Thunspell_uninitialize">Thunspell_uninitialize</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="hunspell_spell"></a><code><b>hunspell_spell</b>: <a   href="HunSpellApi.html#Thunspell_spell">Thunspell_spell</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="hunspell_suggest"></a><code><b>hunspell_suggest</b>: <a   href="HunSpellApi.html#Thunspell_suggest">Thunspell_suggest</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="hunspell_suggest_auto"></a><code><b>hunspell_suggest_auto</b>: <a   href="HunSpellApi.html#Thunspell_suggest_auto">Thunspell_suggest_auto</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="hunspell_suggest_free"></a><code><b>hunspell_suggest_free</b>: <a   href="HunSpellApi.html#Thunspell_suggest_free">Thunspell_suggest_free</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="hunspell_get_dic_encoding"></a><code><b>hunspell_get_dic_encoding</b>: <a   href="HunSpellApi.html#Thunspell_get_dic_encoding">Thunspell_get_dic_encoding</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="hunspell_add"></a><code><b>hunspell_add</b>: <a   href="HunSpellApi.html#Thunspell_add">Thunspell_add</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h2 class="authors">Author</h2>
+<ul class="authors">
+<li>Stefan Ascher &lt;<a   href="mailto:stievie@inode.at">stievie@inode.at</a>&gt;</li>
+</ul>
+<h2 class="created">Created</h2>
+<p>
+02-10-2010
+</p>
+<h2 class="modified">Last Modified</h2>
+<p>
+2010/11/30 06:55:58 UTC
+</p>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.0</a> on 2011-01-24 07:59:29</em>
+</span>
+</body></html>

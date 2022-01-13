@@ -1,0 +1,326 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.0">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>THunSpell: HunSpellMemo: Class THunSpellMemo</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="THunSpellMemo"></a><h1 class="cio">Class THunSpellMemo</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="HunSpellMemo.html">HunSpellMemo</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type THunSpellMemo = class(TMemo)</code></p>
+<h2 class="description">Description</h2>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TMemo</li>
+<li class="thisitem">THunSpellMemo</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HunSpellMemo.THunSpellMemo.html#MouseDown">MouseDown</a></b>(Button: TMouseButton; Shift: TShiftState; X, Y: Integer); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HunSpellMemo.THunSpellMemo.html#MouseUp">MouseUp</a></b>(Button: TMouseButton; Shift: TShiftState; X, Y: Integer); override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HunSpellMemo.THunSpellMemo.html#Change">Change</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HunSpellMemo.THunSpellMemo.html#SetCaretPos">SetCaretPos</a></b>(Value: TPoint);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>function <b><a   href="HunSpellMemo.THunSpellMemo.html#GetCaretPos">GetCaretPos</a></b>: TPoint; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a   href="HunSpellMemo.THunSpellMemo.html#Create">Create</a></b>(AOwner: TComponent); override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="HunSpellMemo.THunSpellMemo.html#GetWordAt">GetWordAt</a></b>(const APos: TPoint): string;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="HunSpellMemo.THunSpellMemo.html#GetWordAtCaret">GetWordAtCaret</a></b>: string;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HunSpellMemo.THunSpellMemo.html#ReplaceWordAt">ReplaceWordAt</a></b>(const APos: TPoint; const ANew: string);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HunSpellMemo.THunSpellMemo.html#ReplaceWordAtCaret">ReplaceWordAtCaret</a></b>(const ANew: string);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HunSpellMemo.THunSpellMemo.html#Refresh">Refresh</a></b>;</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpellMemo.THunSpellMemo.html#AddMenu">AddMenu</a></b>: boolean read fAddMenu write fAddMenu default false;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpellMemo.THunSpellMemo.html#AutoSuggest">AutoSuggest</a></b>: boolean read fAutoSuggest write fAutoSuggest default true;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpellMemo.THunSpellMemo.html#CaretPos">CaretPos</a></b>: TPoint read <a   href="HunSpellMemo.THunSpellMemo.html#GetCaretPos">GetCaretPos</a> write <a   href="HunSpellMemo.THunSpellMemo.html#SetCaretPos">SetCaretPos</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpellMemo.THunSpellMemo.html#HunSpell">HunSpell</a></b>: <a   href="HunSpell.THunSpell.html">THunSpell</a> read fHunSpell write SetHunSpell;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpellMemo.THunSpellMemo.html#RightClickMoveCaret">RightClickMoveCaret</a></b>: boolean read fRightClickMoveCaret write fRightClickMoveCaret;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpellMemo.THunSpellMemo.html#RightEdge">RightEdge</a></b>: integer read fRightEdge write SetRightEdge;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpellMemo.THunSpellMemo.html#RightEdgeColor">RightEdgeColor</a></b>: TColor read fRightEdgeColor write SetRightEdgeColor default clSilver;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpellMemo.THunSpellMemo.html#UnderlineColor">UnderlineColor</a></b>: TColor read fUnderlineColor write SetUnderlineColor default clRed;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpellMemo.THunSpellMemo.html#VisibleLines">VisibleLines</a></b>: integer read GetVisibleLines;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="MouseDown"></a><code>procedure <b>MouseDown</b>(Button: TMouseButton; Shift: TShiftState; X, Y: Integer); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Protected declarations</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="MouseUp"></a><code>procedure <b>MouseUp</b>(Button: TMouseButton; Shift: TShiftState; X, Y: Integer); override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="Change"></a><code>procedure <b>Change</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="SetCaretPos"></a><code>procedure <b>SetCaretPos</b>(Value: TPoint);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="GetCaretPos"></a><code>function <b>GetCaretPos</b>: TPoint; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Create"></a><code>constructor <b>Create</b>(AOwner: TComponent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Public declarations</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="GetWordAt"></a><code>function <b>GetWordAt</b>(const APos: TPoint): string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Get word at position.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>APos</dt>
+<dd>The position.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">The word.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="GetWordAtCaret"></a><code>function <b>GetWordAtCaret</b>: string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Get word at caret position. </p>
+<h6 class="description_section">Returns</h6>
+<p class="return">The word.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ReplaceWordAt"></a><code>procedure <b>ReplaceWordAt</b>(const APos: TPoint; const ANew: string);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Replace word at position.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>APos</dt>
+<dd>The position.</dd>
+<dt>ANew</dt>
+<dd>The new word.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ReplaceWordAtCaret"></a><code>procedure <b>ReplaceWordAtCaret</b>(const ANew: string);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Replace word at caret position. </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>ANew</dt>
+<dd>The new word.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Refresh"></a><code>procedure <b>Refresh</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Redraw the window</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="AddMenu"></a><code>property <b>AddMenu</b>: boolean read fAddMenu write fAddMenu default false;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+If <code>True</code> appends an Add word menu item to the suggestion menu.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="AutoSuggest"></a><code>property <b>AutoSuggest</b>: boolean read fAutoSuggest write fAutoSuggest default true;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+If <code>True</code> it automatically pop ups a menu with suggestions for wrong words.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CaretPos"></a><code>property <b>CaretPos</b>: TPoint read <a   href="HunSpellMemo.THunSpellMemo.html#GetCaretPos">GetCaretPos</a> write <a   href="HunSpellMemo.THunSpellMemo.html#SetCaretPos">SetCaretPos</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Caret position.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="HunSpell"></a><code>property <b>HunSpell</b>: <a   href="HunSpell.THunSpell.html">THunSpell</a> read fHunSpell write SetHunSpell;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<a class="normal"  href="HunSpell.THunSpell.html">THunSpell</a> object to use for spell checking.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="RightClickMoveCaret"></a><code>property <b>RightClickMoveCaret</b>: boolean read fRightClickMoveCaret write fRightClickMoveCaret;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+If <code>True</code> the caret pos is moved to the cursor pos with a right click.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="RightEdge"></a><code>property <b>RightEdge</b>: integer read fRightEdge write SetRightEdge;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Show a line at char pos.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="RightEdgeColor"></a><code>property <b>RightEdgeColor</b>: TColor read fRightEdgeColor write SetRightEdgeColor default clSilver;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Color of the line.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="UnderlineColor"></a><code>property <b>UnderlineColor</b>: TColor read fUnderlineColor write SetUnderlineColor default clRed;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Color to underline words.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="VisibleLines"></a><code>property <b>VisibleLines</b>: integer read GetVisibleLines;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Count of visible lines.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.0</a> on 2011-01-24 07:59:29</em>
+</span>
+</body></html>

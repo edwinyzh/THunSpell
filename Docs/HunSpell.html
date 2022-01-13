@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.0">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>THunSpell: HunSpell</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit HunSpell</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td><a class="section"  href="#%40Classes">Classes, Interfaces, Objects and Records</a></td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td>Types</td><td><a class="section"  href="#%40Constants">Constants</a></td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Component wrapper for Hunspell &lt;<a  target="_parent" href="http://hunspell.sourceforge.net/">http://hunspell.sourceforge.net/</a>&gt;</p>
+<p>
+THunSpell Copyright (C) 2010, Stefan Ascher
+
+<p>
+
+<p>Hunspell is the spell checker used by OpenOffice.org (LibreOffice???) and Mozilla (Firefox, Thunderbird etc.).
+
+<p>Get Dictionaries from &lt;<a  target="_parent" href="http://wiki.services.openoffice.org/wiki/Dictionaries">http://wiki.services.openoffice.org/wiki/Dictionaries</a>&gt;. It seems that the *.oxt files are ordinary ZIP files, you can open them with e.g. 7-Zip &lt;<a  target="_parent" href="http://www.7-zip.org/">http://www.7-zip.org/</a>&gt; and extract the files to the dictionary directory.
+
+<p>  
+
+<p>$Id: HunSpell.pas,v 1.7 2011/01/24 06:58:25 Stefan Ascher Exp $</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Classes"></a><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Class&nbsp;<a class="bold"  href="HunSpell.THunSpell.html"><code>THunSpell</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+</table>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="HunSpell.html#Register">Register</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="HunSpell.html#IsSeparator">IsSeparator</a></b>(const AChar: Char): boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="HunSpell.html#StripQuotes">StripQuotes</a></b>(const AWord: string): string;</code></td>
+</tr>
+</table>
+<a name="%40Constants"></a><h3 class="summary">Constants</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="HunSpell.html#THUNSPELL_VERSION">THUNSPELL_VERSION</a></b> = '1.11';</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="HunSpell.html#DIC_EXT">DIC_EXT</a></b> = '.dic';</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="HunSpell.html#AFF_EXT">AFF_EXT</a></b> = '.aff';</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="HunSpell.html#CUSTOM_NAME">CUSTOM_NAME</a></b> = 'custom.dic';</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="HunSpell.html#SEPARATOR_CHARS">SEPARATOR_CHARS</a></b> = ['.', ';', ',', ':', '¡', '!', '·', '&quot;', '&circ;', '+', '-', '*',
+    '/', '\', '¨', ' ', #9, '`', '[', ']', '(', ')', 'º', 'ª', '{', '}', '?', '¿', '%',
+    '=', '&lt;', '&gt;', '$', '@', '|', '&tilde;'];</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="HunSpell.html#CP_ISOLATIN1">CP_ISOLATIN1</a></b> = 28591;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="HunSpell.html#CP_WINLATIN1">CP_WINLATIN1</a></b> = 1252;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Register"></a><code>procedure <b>Register</b>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="IsSeparator"></a><code>function <b>IsSeparator</b>(const AChar: Char): boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Check if a character is a separator.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>AChar</dt>
+<dd>The character to check.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return"><code>True</code> if AChar is a separator.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StripQuotes"></a><code>function <b>StripQuotes</b>(const AWord: string): string;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Strip single quotes from a string.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>AWord</dt>
+<dd>The word.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">AWord without single quotes.</p></td></tr>
+</table>
+<h3 class="detail">Constants</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="THUNSPELL_VERSION"></a><code><b>THUNSPELL_VERSION</b> = '1.11';</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="DIC_EXT"></a><code><b>DIC_EXT</b> = '.dic';</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Extension of dic files</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AFF_EXT"></a><code><b>AFF_EXT</b> = '.aff';</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Extension of aff files</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="CUSTOM_NAME"></a><code><b>CUSTOM_NAME</b> = 'custom.dic';</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Name of custom dictionary</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="SEPARATOR_CHARS"></a><code><b>SEPARATOR_CHARS</b> = ['.', ';', ',', ':', '¡', '!', '·', '&quot;', '&circ;', '+', '-', '*',
+    '/', '\', '¨', ' ', #9, '`', '[', ']', '(', ')', 'º', 'ª', '{', '}', '?', '¿', '%',
+    '=', '&lt;', '&gt;', '$', '@', '|', '&tilde;'];</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Separator characters used to detect word boundaries. Single quote (') is not included this is a special case.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="CP_ISOLATIN1"></a><code><b>CP_ISOLATIN1</b> = 28591;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="CP_WINLATIN1"></a><code><b>CP_WINLATIN1</b> = 1252;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h2 class="authors">Author</h2>
+<ul class="authors">
+<li>Stefan Ascher &lt;<a   href="mailto:stievie@inode.at">stievie@inode.at</a>&gt;</li>
+</ul>
+<h2 class="created">Created</h2>
+<p>
+02-10-2010
+</p>
+<h2 class="modified">Last Modified</h2>
+<p>
+2011/01/24 06:58:25 UTC
+</p>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.0</a> on 2011-01-24 07:59:29</em>
+</span>
+</body></html>

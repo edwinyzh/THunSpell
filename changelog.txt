@@ -1,0 +1,61 @@
+================================================================================
+ Changes Log for THunSpell
+ Important changes only
+
+ ===============================================================================
+
+2022-01-13:
+- Downloaded the original version of THunSpell by Stefan Ascher from (https://torry.net/authorsmore.php?id=7163),
+  the original version is assumed to be developed for Delphi 6 (Non-unicode Delphi).
+- Upgraded to unicode Delphi (XE4) and the demo is running correctly.
+- Still uses Hunspell DLL version 1.3.2.
+
+Version 1.13 23.03.2011
+  - Fixed right edge.
+  - Fixed TabsToSpace
+  - Updated to Hunspell version 1.3.2
+Version 1.12 13.02.2011
+  - Added MaxLineWidth property to THunSpellMemo
+  - THunSpellMemo: Move the caret only with a right mouse click when there is no
+    selection.
+Version 1.11 24.01.2011
+  - Added IgnoreAllCaps property to THunSpell.
+  - Added CustomDistName property to THunSpell.
+Version 1.10 29.12.2010
+  - Suggestions returned empty strings - fixed.
+  - Fixed division by zero exception (it seems my Trunc function is somehow broken, 
+    that's bad).
+  - Fixed Access Violation.
+Version 1.9 13.12.2010
+  - Added RightEdge property to THunSpellMeno. If > 0 it draws a silver line at 
+    that position. Works only with fixed width fonts.
+Version 1.8 01.12.2010
+  - CaretPos is no longer limited to 16-bit values.
+  - EM_CHARFROMPOS is no longer limited to files < 64K. If the file is > 64K the 
+    returned value is a 32-bit value with the char position, and line number is 
+    not returned. Files < 64K still works like it's described in MSDN.
+  - Added IgnoreWordsWithNumbers property to THunSpell.
+  - Added support for different dictionary encodings. Real UNICODE support still 
+    requires some work, but I still use D5.
+Version 1.7 30.11.2010
+  - Removed old demo, the included demo should show everything you can do with 
+    it and is even useful (for a Notepad-Fan).
+  - Minor fixes and enhancements.
+  - Added XP manifest for demo application.
+Version 1.6 29.11.2010
+  - Fixed bug Control has no parent.
+  - Fixed resource leak in THunSpellMemo.
+  - Added Notepad like demo
+Version 1.5 27.11.2010
+  - Added component to use a spell check dialog (FR #6).
+Version 1.4 26.11.2010
+  - Fixed another bug when line was empty or contained only spaces
+Version 1.3 25.11.2010
+  - Fixed bug #7: Bug when first line is blank
+Version 1.2 23.11.2010
+  - Added support for custom dictionaries
+  - Fixed painting bug
+Version 1.1
+  - Fixed lots of bugs
+Version 1.0
+  - First public release

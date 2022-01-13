@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.0">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>THunSpell: HunSpell: Class THunSpell</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="THunSpell"></a><h1 class="cio">Class THunSpell</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="HunSpell.html">HunSpell</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type THunSpell = class(TComponent)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Component wrapper for the Hunspell library &lt;<a  target="_parent" href="http://hunspell.sourceforge.net/">http://hunspell.sourceforge.net/</a>&gt;.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TComponent</li>
+<li class="thisitem">THunSpell</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a   href="HunSpell.THunSpell.html#Create">Create</a></b>(AOwner: TComponent); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a   href="HunSpell.THunSpell.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="HunSpell.THunSpell.html#Spell">Spell</a></b>(const AWord: string): boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="HunSpell.THunSpell.html#Suggest">Suggest</a></b>(const AWord: string; AStrings: TStrings): integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="HunSpell.THunSpell.html#Ignore">Ignore</a></b>(const AWord: string): boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="HunSpell.THunSpell.html#Add">Add</a></b>(const AWord: string): boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="HunSpell.THunSpell.html#GetDicts">GetDicts</a></b>(AList: TStrings): integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>class function <b><a   href="HunSpell.THunSpell.html#SearchDicts">SearchDicts</a></b>(const ADir: string; AList: TStrings): integer;</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpell.THunSpell.html#Codepage">Codepage</a></b>: Word read fCodePage;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpell.THunSpell.html#CustomDic">CustomDic</a></b>: boolean read fCustomDic write SetCustomDic;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpell.THunSpell.html#CustomDistName">CustomDistName</a></b>: string read GetCustomDictName;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpell.THunSpell.html#Dict">Dict</a></b>: string read fDict write SetDict;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpell.THunSpell.html#DictDir">DictDir</a></b>: string read fDictDir write SetDictDir;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpell.THunSpell.html#DictEncoding">DictEncoding</a></b>: string read GetDictEncoding;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpell.THunSpell.html#Enabled">Enabled</a></b>: boolean read fEnabled write SetEnabled default true;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpell.THunSpell.html#IgnoreAllCaps">IgnoreAllCaps</a></b>: boolean read fIgnoreAllCaps write fIgnoreAllCaps;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpell.THunSpell.html#IgnoreWordsWithNumbers">IgnoreWordsWithNumbers</a></b>: boolean read fIgnoreWordsWithNumbers write fIgnoreWordsWithNumbers;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpell.THunSpell.html#Initialized">Initialized</a></b>: boolean read GetInitialized;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpell.THunSpell.html#OnInit">OnInit</a></b>: TNotifyEvent read fOnInit write fOnInit;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="HunSpell.THunSpell.html#OnUninit">OnUninit</a></b>: TNotifyEvent read fOnUninit write fOnUninit;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Create"></a><code>constructor <b>Create</b>(AOwner: TComponent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Public declarations</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Destroy"></a><code>destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Spell"></a><code>function <b>Spell</b>(const AWord: string): boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Check a word  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>AWord</dt>
+<dd>The word to check.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return"><code>True</code> if it's properly spelled.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Suggest"></a><code>function <b>Suggest</b>(const AWord: string; AStrings: TStrings): integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Get suggestions for a not found word.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>AWord</dt>
+<dd>The word</dd>
+<dt>AString</dt>
+<dd>This List is filled with the suggestions.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">Count of suggestions.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Ignore"></a><code>function <b>Ignore</b>(const AWord: string): boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ignore all occurrences of the word.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>AWord</dt>
+<dd>The word to ignore.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return"><code>True</code> when the word was added.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Add"></a><code>function <b>Add</b>(const AWord: string): boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+If <a class="normal"  href="HunSpell.THunSpell.html#CustomDic">CustomDic</a> = <code>True</code> the word is added to custom.dic, otherwise it is the same as <a class="normal"  href="HunSpell.THunSpell.html#Ignore">Ignore</a>.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>AWord</dt>
+<dd>The word to ignore.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return"><code>True</code> when the word was added.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="GetDicts"></a><code>function <b>GetDicts</b>(AList: TStrings): integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Get all dictionaries in the dictionaries directory (<a class="normal"  href="HunSpell.THunSpell.html#DictDir">DictDir</a>).  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>AList</dt>
+<dd>The list to fill with the dictionaries.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">Count of found dictionaries.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="SearchDicts"></a><code>class function <b>SearchDicts</b>(const ADir: string; AList: TStrings): integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Search given directory for dictionaries.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>ADir</dt>
+<dd>The directory to look for dictionaries.</dd>
+<dt>AList</dt>
+<dd>List with filled dictionaries.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">The count of found dictionaries.</p></td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Codepage"></a><code>property <b>Codepage</b>: Word read fCodePage;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Return codepage of loaded dictionary.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="CustomDic"></a><code>property <b>CustomDic</b>: boolean read fCustomDic write SetCustomDic;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+En-/Disable custom dictionary. Added words are saved to dict\custom.dic</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CustomDistName"></a><code>property <b>CustomDistName</b>: string read GetCustomDictName;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Full filename of the custom dictionary.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="Dict"></a><code>property <b>Dict</b>: string read fDict write SetDict;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Filename of dictionary to use without the extension (.dic, .aff), e.g. <code>en_US</code></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="DictDir"></a><code>property <b>DictDir</b>: string read fDictDir write SetDictDir;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Directory where the dictionary is located. If <a class="normal"  href="HunSpell.THunSpell.html#CustomDic">CustomDic</a> = <code>True</code> then the program should have write permissions for this directory, because custom.dic is saved to it.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="DictEncoding"></a><code>property <b>DictEncoding</b>: string read GetDictEncoding;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Return the encoding of the loaded dictionary.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="Enabled"></a><code>property <b>Enabled</b>: boolean read fEnabled write SetEnabled default true;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+En/-disable spell checking.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="IgnoreAllCaps"></a><code>property <b>IgnoreAllCaps</b>: boolean read fIgnoreAllCaps write fIgnoreAllCaps;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ignore words with all capital letters, e.g. acronyms.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="IgnoreWordsWithNumbers"></a><code>property <b>IgnoreWordsWithNumbers</b>: boolean read fIgnoreWordsWithNumbers write fIgnoreWordsWithNumbers;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ignore words containing numbers.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Initialized"></a><code>property <b>Initialized</b>: boolean read GetInitialized;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns <code>True</code> when the spell checker is ready to use.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="OnInit"></a><code>property <b>OnInit</b>: TNotifyEvent read fOnInit write fOnInit;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Hunspell was initialized.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="OnUninit"></a><code>property <b>OnUninit</b>: TNotifyEvent read fOnUninit write fOnUninit;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Hunspell was uninitialized.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.0</a> on 2011-01-24 07:59:29</em>
+</span>
+</body></html>
