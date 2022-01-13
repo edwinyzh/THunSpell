@@ -17,10 +17,10 @@ Upgraded Delphi hunspell wrapper originally written by Stefan Ascher
 
 # Advantages of THunSpell over the above mentioned spell checkers
 - It's **fast**!
-- Has a `THunSpellDialog` which can direclty check and correct words in a `TMemo` (see screenshot below).
-- Has a `TMemo`-derived class which draws red lines under words that failed to be validated by Hunspell (see screenshot below).
+- Has a `THunSpellDialog` which can direclty check and correct words in a `TMemo`.
+- Has a `TMemo`-derived class which draws red lines under words that failed to be validated by Hunspell.
 
 
 # Possible future enhancements if you want to contribute
-- Upgrade to the latest Hunspell (try refer to NHunspell mentioned above).
-- Ensure `THunSpellDialog` supports `TRichEdit`/`TJvRichEdit` (I'll be testing this soon).
+- Upgrade to the latest Hunspell (try refer to NHunspell mentioned above, I won't do this in the near future unless needed).
+- Ensure `THunSpellDialog` supports `TRichEdit`/`TJvRichEdit` (I'll be doing this soon, but will test against `TJvRichEdit` only).
