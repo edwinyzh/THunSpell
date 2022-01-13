@@ -1,5 +1,7 @@
 # THunSpell
 Upgraded Delphi hunspell wrapper originally written by Stefan Ascher
+![Screenshot of the Demo](THunSpell-Demo.png)
+
 
 # What I have done so far
 - Downloaded the original version of THunSpell by Stefan Ascher from (https://torry.net/authorsmore.php?id=7163),
@@ -10,10 +12,11 @@ Upgraded Delphi hunspell wrapper originally written by Stefan Ascher
 
 # My experiences with Delphi spell check libraries/components
 - [LS Speller (TSpellChecker)](https://www.luziusschneider.com/SpellerHome.htm): This is the one I used in pre-Unicode Delphi, but it doesn't support Delphi 2009+ and I failed to upgrade it to support Unicode Delphi.
-- TMS Spell Checker: I only have the 2017 version and didn't find its spell check dialog directly support TRichEdit, and man, it's **not very fast**...
+- TMS Spell Checker: I only have the 2017 version and didn't find its spell check dialog directly supporting TRichEdit, and man, it's **not very fast**...
 - [NHunspell](https://sourceforge.net/projects/nhunspelldelphi/): Another Hunspell wrapper which uses much newer Hunspell DLL, but it doens't have built-in spell check dialog which can directly operate on a `TCustomMemo` decendent, and that's why I end up upgrading  THunSpell.
 
 # Advantages of THunSpell over the above mentioned spell checkers
+- It's **fast**!
 - Has a `THunSpellDialog` which can direclty check and correct words in a `TMemo` (see screenshot below).
 - Has a `TMemo`-derived class which draws red lines under words that failed to be validated by Hunspell (see screenshot below).
 
@@ -21,6 +24,3 @@ Upgraded Delphi hunspell wrapper originally written by Stefan Ascher
 # Possible future enhancements if you want to contribute
 - Upgrade to the latest Hunspell (try refer to NHunspell mentioned above).
 - Ensure `THunSpellDialog` supports `TRichEdit`/`TJvRichEdit` (I'll be testing this soon).
-
-# Screenshot of the Demo
-![Screenshot of the Demo](THunSpell-Demo.png)
