@@ -111,6 +111,11 @@ type
      }
     class function SearchDicts(const ADir: string; AList: TStrings): integer;
 
+    // This the selected dictionary available (both the .dic and .aff file have to be existing)?
+    function IsSelectedDictAvailable: Boolean;
+    function GetSelectedDictFilePath: String;
+    function GetSelectedAffixFilePath: String;
+
     { Returns @true when the spell checker is ready to use. }
     property Initialized: boolean read GetInitialized;
     { Return the encoding of the loaded dictionary. }
@@ -146,13 +151,16 @@ const
   DIC_EXT = '.dic';              {< Extension of dic files }
   AFF_EXT = '.aff';              {< Extension of aff files }
   CUSTOM_NAME = 'custom.dic';    {< Name of custom dictionary }
-  SEP_CHARS_COUNT = 36;
+
+  SEP_CHARS_COUNT = 38;
+
   { Separator characters used to detect word boundaries. Single quote (') is not
     included this is a special case. }
   SEP_CHARS: array[0..SEP_CHARS_COUNT-1] of Char = (
     '.', ';', ',', ':', '!', '·', '"', '^', '+', '-', '*', '/', '\', '¨', ' ',
     #9, '`', '[', ']', '(', ')', 'º', 'ª', '{', '}', '?', '¿', '%', '=', '<',
-    '>', '$', '@', '|', '~', '&'
+    '>', '$', '@', '|', '~', '&',
+    #10, #13// 2022-01-15: Edwin Yip: Added line break as word separators
   );
 
   CP_ISOLATIN1 = 28591;
@@ -510,7 +518,8 @@ end;
 
 function THunSpell.DecodeString(const S: AnsiString): UnicodeString;
 var
-  WideBuffer: array [0..511] of WideChar;
+  // WideBuffer: array [0..511] of WideChar;
+  WideBuffer: array [0..1023] of WideChar;
   WideLen: Integer;
   //{$ifndef UNICODE}
   //  WideRes: UnicodeString;
@@ -527,6 +536,21 @@ begin
   // Convert string from DLL to Delphi string
   WideLen := MultiByteToWideChar(fCodePage, 0, PAnsiChar(S), -1, WideBuffer, Length(WideBuffer)) - 1;
   SetString(Result, WideBuffer, WideLen);
+end;
+
+function THunSpell.IsSelectedDictAvailable: Boolean;
+begin
+  Result := FileExists(GetSelectedDictFilePath) and FileExists(GetSelectedAffixFilePath);
+end;
+
+function THunSpell.GetSelectedDictFilePath: String;
+begin
+  Result := DictDir + PathDelim + Dict + DIC_EXT;
+end;
+
+function THunSpell.GetSelectedAffixFilePath: String;
+begin
+  Result := DictDir + PathDelim + Dict + AFF_EXT;
 end;
 
 end.

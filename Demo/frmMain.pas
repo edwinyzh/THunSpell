@@ -322,6 +322,7 @@ begin
   AppPath := ExcludeTrailingBackslash(ExtractFilePath(Application.ExeName));
   DictPath := ExcludeTrailingBackslash(AppPath) + '\Dict';
   HunSpell.DictDir := DictPath;
+
   sl := TStringList.Create;
   try
     HunSpell.GetDicts(sl);
@@ -336,6 +337,7 @@ begin
   finally
     sl.Free;
   end;
+
   LoadSettings;
   Application.OnHint := App_Hint;
   UpdateCaption;
